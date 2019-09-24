@@ -20,14 +20,14 @@ main(void)
   dup(0);  // stderr
 
   for(;;){
-    printf(1, "init: starting sh\n");
+    printf(1, "init: Aqui empieza el cotorreo sh\n"); //starting
     pid = fork();
     if(pid < 0){
       printf(1, "init: fork failed\n");
       exit();
     }
     if(pid == 0){
-      exec("sh", argv);
+      exec("ls", argv); //cambiar a alguna ejecucion, sh
       printf(1, "init: exec sh failed\n");
       exit();
     }
